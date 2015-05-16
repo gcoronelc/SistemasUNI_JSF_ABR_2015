@@ -1,0 +1,30 @@
+package pe.egcc.ventasjpa.controller;
+
+import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import pe.egcc.ventasjpa.domain.Venta;
+
+@ManagedBean
+@SessionScoped
+public class VentaController {
+
+  private Venta venta;
+  
+  @PostConstruct
+  public void initBean(){
+    venta = new Venta();
+    venta.setImporte(0.0);
+  }
+  
+  public Venta getVenta() {
+    return venta;
+  }
+  
+  public void setVenta(Venta venta) {
+    this.venta = venta;
+  }
+  
+  
+}

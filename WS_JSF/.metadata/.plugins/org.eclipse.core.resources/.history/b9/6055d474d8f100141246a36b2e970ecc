@@ -1,0 +1,16 @@
+package pe.egcc.ventasjpa.controller;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import pe.egcc.ventasjpa.domain.Venta;
+
+@ManagedBean
+@SessionScoped
+public class VentaController {
+
+  private Venta venta;
+  
+  
+  
+}

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-jdbc.jar"/>
+  <path value="E:/EGCC/JSF_ABRIL_2015/WS_JSF/AppVentasJSF/WebContent/WEB-INF/lib/primefaces-5.2.jar">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-5.2.jar/meta-inf/faces-config.xml" project="AppVentasJSF"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-5.2.jar/meta-inf/primefaces-p.taglib.xml" project="AppVentasJSF"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-5.2.jar/meta-inf/primefaces-pm.taglib.xml" project="AppVentasJSF"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="E:/EGCC/JSF_ABRIL_2015/WS_JSF/AppVentasJSF/WebContent/WEB-INF/lib/iText-2.1.7.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-dbcp.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-util-scan.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/catalina-tribes.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/jasper.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/servlet-api.jar"/>
+  <path value="E:/EGCC/JSF_ABRIL_2015/WS_JSF/AppVentasJSF/WebContent/WEB-INF/lib/ojdbc6.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-util.jar"/>
+  <path value="E:/EGCC/JSF_ABRIL_2015/WS_JSF/AppVentasJSF/WebContent/WEB-INF/lib/javax.persistence_2.1.0.v201304241213.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-i18n-fr.jar"/>
+  <path value="E:/EGCC/JSF_ABRIL_2015/WS_JSF/AppVentasJSF/WebContent/WEB-INF/lib/eclipselink.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-websocket.jar"/>
+  <path value="E:/EGCC/JSF_ABRIL_2015/WS_JSF/AppVentasJSF/WebContent/WEB-INF/lib/org.eclipse.persistence.jpa.jpql_2.5.1.v20130918-f2b9fc5.jar"/>
+  <path value="E:/EGCC/JSF_ABRIL_2015/WS_JSF/AppVentasJSF/WebContent/WEB-INF/lib/poi-3.11-20141221.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/el-api.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/jsp-api.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/websocket-api.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-jni.jar"/>
+  <path value="E:/EGCC/JSF_ABRIL_2015/WS_JSF/AppVentasJSF/WebContent/WEB-INF/lib/javax.faces-2.2.9.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-javax.faces-2.2.9.jar/meta-inf/html_basic.tld" project="AppVentasJSF"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-javax.faces-2.2.9.jar/meta-inf/jsf_core.tld" project="AppVentasJSF"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-javax.faces-2.2.9.jar/meta-inf/mojarra_ext.taglib.xml" project="AppVentasJSF"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-javax.faces-2.2.9.jar/meta-inf/mojarra_ext.tld" project="AppVentasJSF"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/ecj-4.4.2.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/catalina-ha.jar"/>
+  <path value="/AppVentasJSF/WebContent/WEB-INF/faces-config.xml">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/WEB-INF/faces-config.xml" project="AppVentasJSF"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-i18n-ja.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-i18n-es.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-spdy.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/catalina.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/catalina-ant.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/jasper-el.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-api.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/annotations-api.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/catalina-storeconfig.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-coyote.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification"/>
+  <core validator-id="jboss.cdi.core"/>
+  <core validator-id="jboss.jsf.core"/>
+  <el>
+   <linked-el length="39" name="%0" offset="1529" path="%1"/>
+   <linked-el length="35" name="%0" offset="860" path="%1"/>
+   <linked-el length="35" name="%0" offset="754" path="%1"/>
+   <linked-el length="14" name="%2" offset="936" path="%3"/>
+   <linked-el length="14" name="%2" offset="1545" path="%3"/>
+   <linked-el length="35" name="%2" offset="874" path="%3"/>
+   <linked-el length="13" name="%2" offset="1752" path="%3"/>
+   <linked-el length="41" name="%2" offset="1323" path="%3"/>
+   <linked-el length="13" name="%2" offset="960" path="%3"/>
+   <linked-el length="14" name="%2" offset="1441" path="%3"/>
+   <linked-el length="14" name="%2" offset="1649" path="%3"/>
+   <linked-el length="42" name="%2" offset="1090" path="%3"/>
+   <linked-el length="24" name="%2" offset="753" path="%3"/>
+   <linked-el length="42" name="%2" offset="1237" path="%3"/>
+   <linked-el length="20" name="%4" offset="665" path="%5"/>
+   <linked-el length="37" name="%4" offset="615" path="%6"/>
+   <linked-el length="35" name="%4" offset="725" path="%6"/>
+   <linked-el length="57" name="%4" offset="885" path="%6"/>
+   <linked-el length="46" name="%4" offset="564" path="%7"/>
+   <linked-el length="39" name="%5" offset="1529" path="%1"/>
+   <linked-el length="46" name="%5" offset="2762" path="%1"/>
+   <linked-el length="31" name="%5" offset="2605" path="%1"/>
+   <linked-el length="35" name="%5" offset="1388" path="%1"/>
+   <linked-el length="27" name="%5" offset="2348" path="%1"/>
+   <linked-el length="35" name="%5" offset="860" path="%1"/>
+   <linked-el length="37" name="%5" offset="1201" path="%1"/>
+   <linked-el length="35" name="%5" offset="754" path="%1"/>
+   <linked-el length="36" name="%5" offset="1029" path="%1"/>
+   <linked-el length="36" name="%5" offset="2406" path="%1"/>
+   <linked-el length="37" name="%8" offset="615" path="%6"/>
+   <linked-el length="35" name="%8" offset="725" path="%6"/>
+   <linked-el length="46" name="%8" offset="564" path="%7"/>
+   <linked-el length="14" name="%9" offset="1545" path="%3"/>
+   <linked-el length="13" name="%9" offset="1752" path="%3"/>
+   <linked-el length="21" name="%9" offset="1752" path="%1"/>
+   <linked-el length="14" name="%9" offset="2493" path="%1"/>
+   <linked-el length="21" name="%9" offset="1643" path="%1"/>
+   <linked-el length="14" name="%9" offset="1441" path="%3"/>
+   <linked-el length="14" name="%9" offset="1649" path="%3"/>
+   <linked-el length="14" name="%9" offset="2469" path="%1"/>
+   <linked-el length="39" name="%10" offset="1529" path="%1"/>
+   <linked-el length="21" name="%10" offset="1752" path="%1"/>
+   <linked-el length="14" name="%10" offset="2493" path="%1"/>
+   <linked-el length="35" name="%10" offset="860" path="%1"/>
+   <linked-el length="14" name="%10" offset="2469" path="%1"/>
+   <linked-el length="36" name="%10" offset="1029" path="%1"/>
+   <linked-el length="14" name="%10" offset="1861" path="%1"/>
+   <linked-el length="36" name="%10" offset="2406" path="%1"/>
+   <linked-el length="12" name="%10" offset="1961" path="%1"/>
+   <linked-el length="46" name="%10" offset="2762" path="%1"/>
+   <linked-el length="31" name="%10" offset="2605" path="%1"/>
+   <linked-el length="21" name="%10" offset="1643" path="%1"/>
+   <linked-el length="35" name="%10" offset="1388" path="%1"/>
+   <linked-el length="27" name="%10" offset="2348" path="%1"/>
+   <linked-el length="37" name="%10" offset="1201" path="%1"/>
+   <linked-el length="35" name="%10" offset="754" path="%1"/>
+   <linked-el length="16" name="%10" offset="2063" path="%1"/>
+   <linked-el length="12" name="%11" offset="1961" path="%1"/>
+   <linked-el length="21" name="%11" offset="1752" path="%1"/>
+   <linked-el length="31" name="%11" offset="2605" path="%1"/>
+   <linked-el length="21" name="%11" offset="1643" path="%1"/>
+   <linked-el length="16" name="%11" offset="2063" path="%1"/>
+   <linked-el length="14" name="%11" offset="1861" path="%1"/>
+   <linked-el length="20" name="%12" offset="665" path="%5"/>
+   <linked-el length="37" name="%12" offset="615" path="%6"/>
+   <linked-el length="35" name="%12" offset="725" path="%6"/>
+   <linked-el length="57" name="%12" offset="885" path="%6"/>
+   <linked-el length="46" name="%12" offset="564" path="%7"/>
+   <linked-el length="14" name="%13" offset="936" path="%3"/>
+   <linked-el length="13" name="%13" offset="960" path="%3"/>
+   <linked-el length="35" name="%14" offset="874" path="%3"/>
+   <linked-el length="41" name="%14" offset="1323" path="%3"/>
+   <linked-el length="42" name="%14" offset="1090" path="%3"/>
+   <linked-el length="24" name="%14" offset="753" path="%3"/>
+   <linked-el length="42" name="%14" offset="1237" path="%3"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="/AppVentasJSF/src/pe/egcc/ventasjpa/domain/Venta.java" value="%0"/>
+  <alias path="appController" value="%2"/>
+  <alias
+   path="/AppVentasJSF/src/pe/egcc/ventasjpa/controller/LogonController.java" value="%4"/>
+  <alias
+   path="/AppVentasJSF/src/pe/egcc/ventasjpa/controller/VentaController.java" value="%5"/>
+  <alias path="/AppVentasJSF/WebContent/index.xhtml" value="%6"/>
+  <alias path="/AppVentasJSF/src/pe/egcc/ventasjpa/domain/Usuario.java" value="%8"/>
+  <alias path="/AppVentasJSF/WebContent/ventas.xhtml" value="%1"/>
+  <alias path="/AppVentasJSF/src/pe/egcc/ventasjpa/domain/Producto.java" value="%9"/>
+  <alias path="ventaController" value="%10"/>
+  <alias path="/AppVentasJSF/src/pe/egcc/ventasjpa/domain/Detalle.java" value="%11"/>
+  <alias path="/AppVentasJSF/WebContent/template/topPage.xhtml" value="%7"/>
+  <alias path="logonController" value="%12"/>
+  <alias
+   path="/AppVentasJSF/src/pe/egcc/ventasjpa/domain/Categoria.java" value="%13"/>
+  <alias
+   path="/AppVentasJSF/src/pe/egcc/ventasjpa/controller/AppController.java" value="%14"/>
+  <alias path="/AppVentasJSF/WebContent/conProductos.xhtml" value="%3"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://xmlns.jcp.org/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+  <uri value="http://primefaces.org/ui">
+   <prefix>p</prefix>
+  </uri>
+ </uris>
+</kb-project>

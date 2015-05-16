@@ -1,0 +1,53 @@
+#page {
+	width: 900px;
+	margin: 5px auto;
+	padding: 5px;
+}
+
+#top {
+	width: 890px; 
+	background-color: #036fab;
+	color: white;
+	padding: 5px;
+	margin: 5px;
+	position: relative;
+}
+
+#menu  {
+  width: 890px; 
+  position : relative;
+  background-color: #dddddd;
+  color: #1C1C1C;
+  margin: 5px;
+  padding: 5px;
+}
+
+#bottom {
+	width: 890px;
+	position: relative;
+	background-color: #c2dfef;
+	padding: 5px;
+	margin: 5px;
+	color: #0101DF;
+}
+
+#content {
+	width: 890px;
+	position: relative;
+	background-color: white;
+	color: #1C1C1C;
+	margin: 5px;
+	padding: 5px;
+}
+
+#top a:link, #top a:visited {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#top a:link:hover, #top a:visited:hover {
+	color: black;
+	font-weight: bold;
+	text-decoration: underline;
+}

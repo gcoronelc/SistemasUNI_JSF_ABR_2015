@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-jdbc.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-dbcp.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-util-scan.jar"/>
+  <path value="E:/EGCC/JSF_ABRIL_2015/WS_JSF/Demo02/WebContent/WEB-INF/lib/primefaces-5.2.jar">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-5.2.jar/meta-inf/faces-config.xml" project="Demo02"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-5.2.jar/meta-inf/primefaces-p.taglib.xml" project="Demo02"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-5.2.jar/meta-inf/primefaces-pm.taglib.xml" project="Demo02"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/catalina-tribes.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/jasper.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/servlet-api.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-util.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-i18n-fr.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-websocket.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/el-api.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/jsp-api.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/websocket-api.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-jni.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/ecj-4.4.2.jar"/>
+  <path value="E:/EGCC/JSF_ABRIL_2015/WS_JSF/Demo02/WebContent/WEB-INF/lib/javax.faces-2.2.9.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-javax.faces-2.2.9.jar/meta-inf/html_basic.tld" project="Demo02"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-javax.faces-2.2.9.jar/meta-inf/jsf_core.tld" project="Demo02"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-javax.faces-2.2.9.jar/meta-inf/mojarra_ext.taglib.xml" project="Demo02"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-javax.faces-2.2.9.jar/meta-inf/mojarra_ext.tld" project="Demo02"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/catalina-ha.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-i18n-ja.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-i18n-es.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-spdy.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/catalina.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/catalina-ant.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/jasper-el.jar"/>
+  <path value="/Demo02/WebContent/WEB-INF/faces-config.xml">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/WEB-INF/faces-config.xml" project="Demo02"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-api.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/annotations-api.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/catalina-storeconfig.jar"/>
+  <path value="E:/RECURSOS/apache-tomcat-8.0.21/lib/tomcat-coyote.jar"/>
+ </paths>
+ <validation>
+  <el>
+   <linked-el length="33" name="%0" offset="844" path="%1"/>
+   <linked-el length="60" name="%0" offset="886" path="%2"/>
+   <linked-el length="33" name="%0" offset="727" path="%1"/>
+   <linked-el length="31" name="%0" offset="612" path="%1"/>
+   <linked-el length="58" name="%0" offset="731" path="%2"/>
+   <linked-el length="30" name="%0" offset="1075" path="%1"/>
+   <linked-el length="61" name="%0" offset="1066" path="%2"/>
+   <linked-el length="33" name="%0" offset="961" path="%1"/>
+   <linked-el length="33" name="%3" offset="844" path="%1"/>
+   <linked-el length="60" name="%3" offset="886" path="%2"/>
+   <linked-el length="33" name="%3" offset="727" path="%1"/>
+   <linked-el length="31" name="%3" offset="612" path="%1"/>
+   <linked-el length="58" name="%3" offset="731" path="%2"/>
+   <linked-el length="30" name="%3" offset="1075" path="%1"/>
+   <linked-el length="33" name="%3" offset="961" path="%1"/>
+   <linked-el length="19" name="%4" offset="719" path="%5"/>
+   <linked-el length="24" name="%4" offset="977" path="%5"/>
+   <linked-el length="19" name="%4" offset="597" path="%5"/>
+   <linked-el length="19" name="%4" offset="471" path="%5"/>
+   <linked-el length="19" name="%6" offset="719" path="%5"/>
+   <linked-el length="24" name="%6" offset="977" path="%5"/>
+   <linked-el length="19" name="%6" offset="597" path="%5"/>
+   <linked-el length="19" name="%6" offset="471" path="%5"/>
+   <linked-el length="33" name="%7" offset="844" path="%1"/>
+   <linked-el length="60" name="%7" offset="886" path="%2"/>
+   <linked-el length="33" name="%7" offset="727" path="%1"/>
+   <linked-el length="31" name="%7" offset="612" path="%1"/>
+   <linked-el length="58" name="%7" offset="731" path="%2"/>
+   <linked-el length="30" name="%7" offset="1075" path="%1"/>
+   <linked-el length="61" name="%7" offset="1066" path="%2"/>
+   <linked-el length="33" name="%7" offset="961" path="%1"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias
+   path="/Demo02/src/pe/egcc/demo02/controller/VentaController.java" value="%0"/>
+  <alias path="/Demo02/WebContent/ventaResult.xhtml" value="%1"/>
+  <alias path="/Demo02/src/pe/egcc/demo02/dto/VentaDto.java" value="%3"/>
+  <alias path="/Demo02/WebContent/sumar.xhtml" value="%5"/>
+  <alias path="panchito" value="%4"/>
+  <alias
+   path="/Demo02/src/pe/egcc/demo02/controller/SumaController.java" value="%6"/>
+  <alias path="/Demo02/WebContent/ventaForm.xhtml" value="%2"/>
+  <alias path="ventaController" value="%7"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+  <uri value="http://primefaces.org/ui">
+   <prefix>p</prefix>
+  </uri>
+ </uris>
+</kb-project>

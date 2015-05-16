@@ -1,0 +1,44 @@
+package pe.egcc.ventasjpa.controller;
+
+import java.math.BigDecimal;
+
+import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import pe.egcc.ventasjpa.domain.Detalle;
+import pe.egcc.ventasjpa.domain.Venta;
+
+@ManagedBean
+@SessionScoped
+public class VentaController {
+
+  private Venta venta;
+  private Detalle item;
+  
+  @PostConstruct
+  public void initBean(){
+    venta = new Venta();
+    venta.setImporte(new BigDecimal("0.0"));
+  }
+  
+  public Detalle getItem() {
+    return item;
+  }
+  
+  public void setItem(Detalle item) {
+    this.item = item;
+  }
+  
+  public Venta getVenta() {
+    return venta;
+  }
+  
+  public void setVenta(Venta venta) {
+    this.venta = venta;
+  }
+  
+  public void doNuevoItem(){
+    item = new Detalle();
+  }
+}

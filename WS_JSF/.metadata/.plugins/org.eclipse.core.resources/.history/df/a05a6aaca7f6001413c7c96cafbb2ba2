@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+  <body>
+
+    <ui:composition template="./template/pageLayout.xhtml">
+
+      <ui:define name="content">
+        <h:form>
+        
+          <h1>MANTENIMIENTO DE EMPLEADOS</h1>
+          <p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
+          
+          <p:panel header="Criterio de búsqueda">
+            <p:panelGrid columns="4">
+              <p:outputLabel value="Nombre:" />
+              <p:inputText value="#{empleadoController.beanCriterio.nombre}" />
+              <p:separator />
+              <p:separator />
+              <p:outputLabel value="Apellido:" />
+              <p:inputText value="#{empleadoController.beanCriterio.apellido}" />
+              <p:commandButton value="Consultar"
+                action="#{empleadoController.doConsultar()}"
+                update="dataEmpleado"/>
+              <p:commandButton update=":form:idItem"
+                               oncomplete="PF('dlgBean').show()" 
+                               icon="ui-icon-plusthick"
+                               title="Nuevo Item" 
+                               action="#{empleadoController.do}" />
+            </p:panelGrid>
+          </p:panel>
+          
+          <p:dataTable id="dataEmpleado" value="#{empleadoController.listaEmpleados}" var="r">
+          
+            <p:column headerText="ID" >
+              <h:outputText value="#{r.idemp}"/>
+            </p:column>
+          
+            <p:column headerText="NOMBRE" >
+              <h:outputText value="#{r.nombre}"/>
+            </p:column>
+            
+            <p:column headerText="APELLIDO" >
+              <h:outputText value="#{r.apellido}"/>
+            </p:column>
+            
+            <p:column headerText="EMAIL" >
+              <h:outputText value="#{r.email}"/>
+            </p:column>
+            
+            <p:column headerText="TELEFONO" >
+              <h:outputText value="#{r.telefono}"/>
+            </p:column>
+            
+          
+          </p:dataTable>
+          
+          <p:dialog header="#{empleadoController.accion} EMPLEADO" 
+                    widgetVar="dlgBean" modal="true"
+                    id="idBean" width="400px">
+
+	          <p:panelGrid columns="2">
+	          
+	            <p:outputLabel value="ID:" />
+	            <h:outputText value="#{empleadoController.beanEmpleado.idemp}" />
+	            
+	            <p:outputLabel value="NOMBRE:" />
+	            <p:inputText value="#{empleadoController.beanEmpleado.nombre}" />
+
+              <p:outputLabel value="APELLIDO:" />
+              <p:inputText value="#{empleadoController.beanEmpleado.apellido}" />
+	            
+	            <p:outputLabel value="TELEFONO:" />
+              <p:inputText value="#{empleadoController.beanEmpleado.telefono}" />
+	            
+	            <p:outputLabel value="EMAIL:" />
+              <p:inputText value="#{empleadoController.beanEmpleado.email}" />
+	            
+	            <f:facet name="footer">
+	              <p:commandButton 
+	                value="Procesar"
+	                update=":form"
+	                action="#{empleadoController.doProcesar()}" 
+	                icon="ui-icon-disk" />
+	            </f:facet>
+	          </p:panelGrid>
+          
+        </p:dialog>
+        
+        </h:form>
+      </ui:define>
+
+    </ui:composition>
+
+  </body>
+</html>

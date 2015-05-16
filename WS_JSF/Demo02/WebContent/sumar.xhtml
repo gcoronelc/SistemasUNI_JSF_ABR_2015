@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+</h:head>
+
+<h:body>
+	<h:form>
+    <h1>SUMAR DOS NUMEROS</h1>
+    <h:messages errorStyle="color:red;" />
+    <h:panelGrid columns="2">
+      <h:outputLabel value="Número 1:" />
+      <h:inputText value="#{panchito.num1}" size="6" 
+        label="Número 1"/>
+      <h:outputLabel value="Número 2:" />
+      <h:inputText value="#{panchito.num2}" size="6"
+        label="Número 2"/>
+      <h:outputLabel value="Suma:" />
+      <h:outputText value="#{panchito.suma}" size="6"/>
+      <f:facet name="footer">
+         <h:panelGroup style="display:block; background-color:#E6E6E6; 
+              height:30px; text-align:center; vertical-align: middle;">
+            <h:commandButton value="Sumar" action="#{panchito.doSumar()}" />
+            <h:commandButton value="Retornar" action="index" 
+                  immediate="true" />
+         </h:panelGroup>
+      </f:facet>
+    </h:panelGrid>
+	</h:form>
+</h:body>
+</html>

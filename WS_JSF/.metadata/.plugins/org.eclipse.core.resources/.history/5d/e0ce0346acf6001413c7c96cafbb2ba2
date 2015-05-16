@@ -1,0 +1,121 @@
+package pe.egcc.ventasjpa.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
+
+import pe.egcc.ventasjpa.domain.Empleado;
+import pe.egcc.ventasjpa.service.CrudEmpleadoImpl;
+import pe.egcc.ventasjpa.service.ICrudEmpleado;
+import pe.egcc.ventasjpa.util.AppUtil;
+
+@ManagedBean
+@SessionScoped
+public class EmpleadoController {
+
+  private List<Empleado> listaEmpleados;
+  private Empleado beanCriterio;
+  private Empleado beanEmpleado;
+  private String accion;
+  private ICrudEmpleado crudEmpleado;
+
+  @PostConstruct
+  private void initBean() {
+    beanCriterio = new Empleado();
+    crudEmpleado = new CrudEmpleadoImpl();
+    beanEmpleado = new Empleado();
+    listaEmpleados = new ArrayList<Empleado>();
+  }
+
+  public List<Empleado> getListaEmpleados() {
+    return listaEmpleados;
+  }
+
+  public void setListaEmpleados(List<Empleado> listaEmpleados) {
+    if (listaEmpleados == null)
+      listaEmpleados = new ArrayList<Empleado>();
+    this.listaEmpleados = listaEmpleados;
+  }
+
+  public Empleado getBeanCriterio() {
+    return beanCriterio;
+  }
+
+  public void setBeanCriterio(Empleado beanCriterio) {
+    this.beanCriterio = beanCriterio;
+  }
+
+  public Empleado getBeanEmpleado() {
+    return beanEmpleado;
+  }
+
+  public void setBeanEmpleado(Empleado beanEmpleado) {
+    this.beanEmpleado = beanEmpleado;
+  }
+
+  public void setAccion(String accion) {
+    this.accion = accion;
+  }
+
+  public String getAccion() {
+    return accion;
+  }
+
+  public void doConsultar() {
+    listaEmpleados = crudEmpleado.traerPorNombre(beanCriterio);
+  }
+
+  public void doNuevo() {
+    beanEmpleado = new Empleado();
+    accion = AppUtil.CRUD_NUEVO;
+  }
+
+  public void doProcesar() {
+    FacesMessage fm = null;
+    try {
+      switch (accion) {
+      case AppUtil.CRUD_NUEVO:
+        crudEmpleado.insertar(beanEmpleado);
+        fm = new FacesMessage(FacesMessage.SEVERITY_INFO, "Proceso ok.",
+            "Empleado registrado correctamente.");
+        listaEmpleados.add(0, beanEmpleado);
+        beanEmpleado = new Empleado();
+        break;
+      case AppUtil.CRUD_EDITAR:
+        crudEmpleado.actualizar(beanEmpleado);
+        fm = new FacesMessage(FacesMessage.SEVERITY_INFO, "Proceso ok.",
+            "Empleado registrado correctamente.");
+        for(int i = 0; i < listaEmpleados.size(); i++ ){
+          Empleado o = listaEmpleados.get(i);
+          if(o.getIdemp().intValue() == beanEmpleado.getIdemp().intValue()){
+            listaEmpleados.set(i, beanEmpleado);
+          }
+        }
+        beanEmpleado = new Empleado();
+        break;
+
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+      fm = new FacesMessage(FacesMessage.SEVERITY_ERROR,
+          "Error en el proceso..", e.getMessage());
+    }
+    FacesContext.getCurrentInstance().addMessage(null, fm);
+  }
+
+  public void setEmpEditar(Empleado bean) {
+    try {
+      beanEmpleado = (Empleado) bean.clone();
+      accion = AppUtil.CRUD_EDITAR;
+    } catch (Exception e) {
+      beanEmpleado = new Empleado();
+      accion = "";
+    }
+
+  }
+}

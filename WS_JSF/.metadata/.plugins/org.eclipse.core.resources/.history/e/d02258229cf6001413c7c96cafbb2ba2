@@ -1,0 +1,40 @@
+package pe.egcc.ventasjpa.controller;
+
+import java.util.List;
+
+import pe.egcc.ventasjpa.domain.Empleado;
+
+public class EmpleadoController {
+
+  private List<Empleado> listaEmpleados;
+  private Empleado beanCriterio;
+  private Empleado beanEmpleado;
+  private String accion;
+  
+  
+
+  public List<Empleado> getListaEmpleados() {
+    return listaEmpleados;
+  }
+
+  public void setListaEmpleados(List<Empleado> listaEmpleados) {
+    this.listaEmpleados = listaEmpleados;
+  }
+
+  public Empleado getBeanCriterio() {
+    return beanCriterio;
+  }
+
+  public void setBeanCriterio(Empleado beanCriterio) {
+    this.beanCriterio = beanCriterio;
+  }
+
+  public Empleado getBeanEmpleado() {
+    return beanEmpleado;
+  }
+
+  public void setBeanEmpleado(Empleado beanEmpleado) {
+    this.beanEmpleado = beanEmpleado;
+  }
+
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<h:form>
+	
+		<p:menubar autoDisplay="false">
+
+			<p:submenu label="Procesos" icon="ui-icon-document">
+				<p:menuitem value="Registrar ventas" action="ventas" />
+				<p:menuitem value="Anular ventas" url="#" />
+			</p:submenu>
+
+			<p:submenu label="Tablas" icon="ui-icon-pencil">
+				<p:menuitem value="Categorìas" url="#" />
+				<p:menuitem value="Productos" url="#" />
+				<p:menuitem value="Empleados" url="#" />
+				<p:menuitem value="Tipos de Pagos" url="#" />
+			</p:submenu>
+
+			<p:submenu label="Consultas" icon="ui-icon-help">
+				<p:menuitem value="Productos" action="conProductos" />
+				<p:menuitem value="Ventas" url="#" />
+			</p:submenu>
+
+			<p:submenu label="Reportes" icon="ui-icon-gear">
+				<p:menuitem value="Save"  />
+				<p:menuitem value="Update"  />
+				<p:menuitem value="Delete"  />
+			</p:submenu>
+
+			<p:menuitem value="Quit" url="#" icon="ui-icon-close" />
+
+		</p:menubar>
+		
+	</h:form>
+</body>
+</html>

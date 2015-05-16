@@ -1,0 +1,169 @@
+package pe.egcc.ventasjpa.service;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
+
+import pe.egcc.ventasjpa.db.AccesoDB;
+import pe.egcc.ventasjpa.domain.Empleado;
+
+public class CrudEmpleadoImpl implements ICrudEmpleado {
+
+  @Override
+  public void insertar(Empleado bean) {
+    EntityManager em = null;
+    EntityTransaction entr = null;
+    try {
+      em = AccesoDB.getEntityManager();
+      entr = em.getTransaction();
+      entr.begin();
+      em.persist(bean);
+      entr.commit();
+      em.close();
+    } catch (Exception e) {
+      try {
+        entr.rollback();
+        em.close();
+      } catch (Exception e1) {
+      }
+      throw e;
+    } finally {
+      try {
+        em.close();
+      } catch (Exception e2) {
+      }
+    }
+  }
+
+  @Override
+  public void actualizar(Empleado bean) {
+    EntityManager em = null;
+    EntityTransaction entr = null;
+    try {
+      em = AccesoDB.getEntityManager();
+      entr = em.getTransaction();
+      entr.begin();
+      em.merge(bean);
+      entr.commit();
+      em.close();
+    } catch (Exception e) {
+      try {
+        entr.rollback();
+        em.close();
+      } catch (Exception e1) {
+      }
+      throw e;
+    } finally {
+      try {
+        em.close();
+      } catch (Exception e2) {
+      }
+    }
+  }
+
+  @Override
+  public void eliminar(Empleado bean) {
+    EntityManager em = null;
+    EntityTransaction entr = null;
+    try {
+      em = AccesoDB.getEntityManager();
+      entr = em.getTransaction();
+      entr.begin();
+      Empleado objeto = em.find(Empleado.class, bean.getIdemp());
+      em.remove(objeto);
+      em.merge(bean);
+      entr.commit();
+      em.close();
+    } catch (Exception e) {
+      try {
+        entr.rollback();
+        em.close();
+      } catch (Exception e1) {
+      }
+      throw e;
+    } finally {
+      try {
+        em.close();
+      } catch (Exception e2) {
+      }
+    }
+  }
+
+  @Override
+  public List<Empleado> traerTodos() {
+    EntityManager em = null;
+    List<Empleado> lista = null;
+    try {
+      em = AccesoDB.getEntityManager();
+      Query q = em.createNamedQuery("Empleado.findAll");
+      lista = q.getResultList();
+    } catch (Exception e) {
+      throw e;
+    } finally {
+      try {
+        em.close();
+      } catch (Exception e2) {
+      }
+    }
+    return lista;
+  }
+
+  @Override
+  public List<Empleado> traerPorNombre(Empleado bean) {
+    EntityManager em = null;
+    List<Empleado> lista = null;
+    try {
+      em = AccesoDB.getEntityManager();
+      Query q = null;
+      String sql = null;
+      if(bean.getNombre().isEmpty() && bean.getApellido().isEmpty()){
+        sql = "SELECT e FROM Empleado e";
+        q = em.createQuery(sql);
+      } else if(bean.getNombre().isEmpty()){
+        sql = "SELECT e FROM Empleado e WHERE e.apellido like :apellido";
+        q = em.createQuery(sql);
+        q.setParameter("apellido", bean.getApellido() + "%");
+      } else if(bean.getApellido().isEmpty()){
+        sql = "SELECT e FROM Empleado e WHERE e.nombre like :nombre";
+        q = em.createQuery(sql);
+        q.setParameter("nombre", bean.getNombre() + "%");
+      } else {
+        sql = "SELECT e FROM Empleado e WHERE e.nombre like :nombre "
+            + "OR e.apellido like :apellido";
+        q = em.createQuery(sql);
+        q.setParameter("nombre", bean.getNombre() + "%");
+        q.setParameter("apellido", bean.getApellido() + "%");
+      }
+      lista = q.getResultList();
+    } catch (Exception e) {
+      throw e;
+    } finally {
+      try {
+        em.close();
+      } catch (Exception e2) {
+      }
+    }
+    return lista;
+  }
+
+  @Override
+  public Empleado traerPorId(Empleado bean) {
+    EntityManager em = null;
+    Empleado empleado = null;
+    try {
+      em = AccesoDB.getEntityManager();
+      empleado = em.find(Empleado.class, bean.getIdemp());
+    } catch (Exception e) {
+      throw e;
+    } finally {
+      try {
+        em.close();
+      } catch (Exception e2) {
+      }
+    }
+    return empleado;
+  }
+
+}

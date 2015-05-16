@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head></h:head> 
+<h:body> 
+  <h:form>
+    <p:panel header="Resultado de la Venta" 
+             style="width:400px;">
+        <h:panelGrid columns="2" cellpadding="10">
+            <p:outputLabel value="Precio:"/>
+            <h:outputText value="#{ventaController.dto.precio}"/>
+            <p:outputLabel value="Cantidad:"/>
+            <h:outputText value="#{ventaController.dto.cantidad}"/>
+            <p:outputLabel value="Subtotal:"/>
+            <h:outputText value="#{ventaController.dto.subtotal}"/>
+            <p:outputLabel value="Impuesto:"/>
+            <h:outputText value="#{ventaController.dto.impuesto}"/>
+            <p:outputLabel value="Total:"/>
+            <h:outputText value="#{ventaController.dto.total}"/>
+        </h:panelGrid>
+        <p:commandButton value="Otra Venta" 
+                         action="ventaForm" 
+                         ajax="false"
+                         immediate="true"/>
+        <p:commandButton value="Home" 
+                         action="index"
+                         ajax="false"
+                         immediate="true" />
+    </p:panel>
+  
+  </h:form>
+</h:body> 
+</html>

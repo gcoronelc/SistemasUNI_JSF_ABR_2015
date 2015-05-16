@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<body>
+
+	<ui:composition template="./template/pageLayout.xhtml">
+
+		<ui:define name="content">
+			<h:form>
+				<h1>VENTAS</h1>
+				<p:panel header="Datos Generales">
+					<p:panelGrid columns="4">
+						<p:outputLabel value="Cliente" />
+						<p:inputText value="#{ventaController.venta.cliente}" />
+						<p:outputLabel value="Importe" />
+						<h:outputText value="#{ventaController.venta.importe}" />
+					</p:panelGrid>
+				</p:panel>
+				<p:panel header="Detalle de Venta">
+					<p:dataTable value="#{ventaController.venta.detalleList}" var="r">
+						<p:column headerText="IDPROD">
+							<h:outputText value="#{r.idprod.idprod}" />
+						</p:column>
+						<p:column headerText="NOMBRE">
+              <h:outputText value="#{r.idprod.nombre}" />
+            </p:column>
+            <p:column headerText="PRECIO">
+              <h:outputText value="#{r.precio}" />
+            </p:column>
+            <p:column headerText="CANT">
+              <h:outputText value="#{r.cant}" />
+            </p:column>
+            <p:column headerText="SUBTOTAL">
+              <h:outputText value="#{r.subtotal}" />
+            </p:column>
+					</p:dataTable>
+				</p:panel>
+			</h:form>
+		</ui:define>
+
+	</ui:composition>
+
+</body>
+</html>
